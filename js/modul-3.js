@@ -425,23 +425,269 @@
 // const secondGroupScores = [89, 14, 51, 26];
 // const thirdGroupScores = [29, 47, 18, 97, 81];
 // // Change code below this line
-// const allScores = [];
-// const bestScore = allScores;
-// const worstScore = allScores;
+// const allScores = [
+//   ...firstGroupScores,
+//   ...secondGroupScores,
+//   ...thirdGroupScores,
+// ];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+// console.log(`allScores`, allScores);
+// console.log(`bestScore`, bestScore);
+// console.log(`worstScore`, worstScore);
 
-// console.log(...firstGroupScores);
-// // Це точна, але незалежна копія масиву
-// const copy = [...firstGroupScores];
+// --29/41---(...spread)
+// ---щоб у змінній finalSettings утворився об'єкт фінальних налаштувань тесту.
+// const defaultSettings = {
+//   theme: "light",
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+// // Change code below this line
+// const finalSettings = { ...defaultSettings, ...overrideSettings };
 
-// --29/41--
-const firstGroupScores = [64, 42, 93];
-const secondGroupScores = [89, 14, 51, 26];
-const thirdGroupScores = [29, 47, 18, 97, 81];
-// Change code below this line
-const allScores = [ ...firstGroupScores, ...secondGroupScores, ...thirdGroupScores ];
-function sum(array) {}
-const sumArray = []
-const bestScore = Math.max(...());
-const worstScore = allScores;
+// --30/41--
+// --ЗАДАЧА. КАРТКИ ЗАВДАНЬ. Функція повинна створити і повернути новий об'єкт завдання, не змінюючи напряму параметр data.
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
+//   // Change code below this line
+//   const propertiesDefault = {
+//     completed,
+//     category,
+//     priority,
+//   };
+//   const dataNew = { ...propertiesDefault, ...data };
+//   return dataNew;
+//   // Change code above this line
+// }
+// console.log(makeTask({}));
+// console.log(
+//   makeTask({
+//     category: "Homemade",
+//     priority: "Low",
+//     text: "Take out the trash",
+//   })
+// );
+/* --Виклик makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }) 
+/повертає { category: "Homemade", priority: "Low", text: "Take out the trash", completed: false } --*/
 
-console.log(allScores);
+// --31/41---------Операція ... (rest) --
+// function add(...args) {
+//   let sum = 0;
+//   for (const num of args) {
+//     sum += num;
+//   }
+//   return sum;
+// }
+// console.log(add(1, 2));
+
+// --32/41--
+// --щоб вона рахувала суму тільки тих аргументів, які більші за задане число. Це число повинно бути першим параметром функції.
+// function addOverNum(num, ...args) {
+//   let total = 0;
+//   for (const arg of args) {
+//     console.log(arg);
+//     if (arg > num) {
+//       total += arg;
+//     }
+//   }
+
+//   return total;
+// }
+// addOverNum(50, 15, 27);
+// // --Виклик addOverNum(50, 15, 27) повертає 0
+
+// --33/41----------------ЗАДАЧА. МАСИВ ЗБІГІВ
+// --щоб вона повертала новий масив matches, в якому будуть тільки ті аргументи, починаючи з другого, які є в масиві першого аргументу.
+// function findMatches(array, ...rest) {
+//   const matches = []; // Don't change this line
+//   for (const num of rest) {
+//     console.log(num, array, array.includes(num));
+//     if (array.includes(num)) {
+//       matches.push(num);
+//     }
+//   }
+//   // Change code above this line
+//   return matches;
+// }
+// findMatches([63, 11, 8, 29], 4, 7, 16);
+// --Виклик findMatches([63, 11, 8, 29], 4, 7, 16) повертає []
+
+// --34/41--
+// --Додай об'єкту bookShelf ще два методи, які поки що будуть повертати просто рядки за аналогією з getBooks() і addBook(bookName).
+// const bookShelf = {
+//   // Change code below this line
+//   books: ["The last kingdom", "The guardian of dreams"],
+//   getBooks() {
+//     return "Returning all books";
+//   },
+//   addBook(bookName) {
+//     return `Adding book ${bookName}`;
+//   },
+//   removeBook(bookName) {
+//     return `Deleting book ${bookName}`;
+//   },
+//   updateBook(oldName, newName) {
+//     return `Updating book ${oldName} to ${newName}`;
+//   },
+//   // Change code above this line
+// };
+// --Виклик методу bookShelf.removeBook("Red sunset") повертає рядок "Deleting book Red sunset"
+
+// --35/41--
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     const index = this.books.indexOf(oldName);
+//     this.books.splice(index, 1, newName);
+//   },
+// };
+// bookShelf.updateBook("The last kingdom", "Dune");
+// console.log(bookShelf.books);
+// --Після виклику методу bookShelf.updateBook("The last kingdom", "Dune"), значення властивості books - це масив ["Dune", "Haze", "The guardian of dreams"]
+
+// --36/41--
+// --ЗАДАЧА. КРАМНИЦЯ ЗІЛЛЯ «У СТАРОЇ ЖАБИ»
+// --Додай об'єкту atTheOldToad властивість potions, значенням якої зроби порожній масив.
+// const atTheOldToad = {
+//   potions: [],
+// };
+
+// --37/41--
+// --ЗАДАЧА. ОТРИМУЄМО ВСЕ ЗІЛЛЯ
+// --Додай об'єкту atTheOldToad метод getPotions(), який просто повертає значення властивості potions.
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   getPotions() {
+//     return this.potions;
+//   },
+// };
+// console.log(atTheOldToad.potions);
+
+// --38/41--
+// --ЗАДАЧА: ДОДАЄМО НОВЕ ЗІЛЛЯ
+// --Доповни метод addPotion(potionName) таким чином, щоб він додавав зілля potionName в кінець масиву зілля у властивості potions.
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   addPotion(potionName) {
+//     // Change code below this line
+//     this.potions.push(potionName);
+
+//     // Change code above this line
+//   },
+// };
+// --Після першого виклику методу atTheOldToad.addPotion("Invisibility"), у властивості potions буде масив ["Speed potion", "Dragon breath", "Stone skin", "Invisibility"]
+
+// --39/41--
+// --ЗАДАЧА: ВИДАЛЯЄМО ЗІЛЛЯ
+// --Доповни метод removePotion(potionName) таким чином, щоб він видаляв зілля potionName з масиву зілля у властивості potions.
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   removePotion(potionName) {
+//     const index = this.potions.indexOf(potionName);
+//     this.potions.splice(index, 1);
+//   },
+// };
+// --Після першого виклику методу atTheOldToad.removePotion("Dragon breath"), у властивості potions буде масив ["Speed potion", Stone skin"]
+
+// --40/41--
+// --ЗАДАЧА: ОНОВЛЮЄМО ЗІЛЛЯ
+// --Доповни метод updatePotionName(oldName, newName) таким чином, щоб він оновлював назву зілля з oldName на newName в масиві зілля у властивості potions.
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   updatePotionName(oldName, newName) {
+//     const index = this.potions.indexOf(oldName);
+//     this.potions.splice(index, 1, newName);
+//   },
+// };
+// --Після першого виклику методу atTheOldToad.updatePotionName("Dragon breath", "Polymorth"), у властивості potions буде масив ["Speed potion", "Polymorth", "Stone skin"]
+
+// --41/41--
+// --ЗАДАЧА: РОЗШИРЮЄМО ІНВЕНТАР
+// --Виконай рефакторинг методів об'єкта atTheOldToad таким чином, щоб вони працювали не з масивом рядків, а з масивом об'єктів.
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     //*вих.код: if (this.potions.includes(newPotion)) {
+//     //*   return `Error! Potion ${newPotion} is already in your inventory!`;}
+//     for (const potion of this.potions) {
+//       if (potion.name === newPotion.name) {
+//         return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//       }
+//     }
+
+//     this.potions.push(newPotion);
+//   },
+//   removePotion(potionName) {
+//     //*вих.код: const potionIndex = this.potions.indexOf(potionName);
+//     //* if (potionIndex === -1) {
+//     //*   return `Potion ${potionName} is not in inventory!`;
+//     //* }
+//     //* this.potions.splice(potionIndex, 1);
+//     for (const potionRemove of this.potions) {
+//       if (potionRemove.name === potionName) {
+//         this.potions.splice(this.potions.indexOf(potionRemove), 1);
+//       }
+//     }
+//   },
+//   updatePotionName(oldName, newName) {
+//     //*вих.код: const potionIndex = this.potions.indexOf(oldName);
+//     //* if (potionIndex === -1) {
+//     //*   return `Potion ${oldName} is not in inventory!`;
+//     //* }
+//     //* this.potions.splice(potionIndex, 1, newName);
+//     for (const potionUp of this.potions) {
+//       if (potionUp.name === oldName) {
+//         potionUp.name = newName;
+//       }
+//     }
+//   },
+// };
+
+// console.log(atTheOldToad.potions);
+// console.log(atTheOldToad.potions[0]);
+// console.log(atTheOldToad.getPotions());
+// console.log(atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }));
+// console.log(atTheOldToad.addPotion({ name: "Stone skin", price: 240 }));
+// console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
+// console.log(atTheOldToad.potions);
+// console.log(atTheOldToad.removePotion("Dragon breath"));
+// console.log(atTheOldToad.potions);
+// console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
+// console.log(atTheOldToad.potions);
+/*
+--Виклик методу atTheOldToad.getPotions() для вихідного об'єкта
+ повертає [ { name: "Speed potion", price: 460 }, { name: "Dragon breath", price: 780 }, { name: "Stone skin", price: 520 } ]
+--Для вихідного об'єкта після виклику методу 
+atTheOldToad.addPotion({ name: "Invisibility", price: 620 }), 
+в масиві potions останнім елементом буде цей об'єкт
+--Для вихідного об'єкта після виклику 
+atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }), 
+масив potions не змінюється
+--Для вихідного об'єкта виклик 
+atTheOldToad.addPotion({ name: "Stone skin", price: 240 }), 
+повертає рядок "Error! Potion Stone skin is already in your inventory!"
+--Для вихідного об'єкта після виклику методу 
+`atTheOldToad.removePotion('Dragon breath')`, 
+у властивості `potions` буде масив `[ { name: 'Speed potion', price: 460 }, { name: 'Stone skin', price: 520 } ]`
+--Для вихідного об'єкта після виклику методу 
+`atTheOldToad.updatePotionName('Dragon breath', 'Polymorth')`, 
+у властивості `potions` буде масив `[{ name: 'Speed potion', price: 460 }, { name: 'Polymorth', price: 780 }, { name: 'Stone skin', price: 520 } ]`
+*/
