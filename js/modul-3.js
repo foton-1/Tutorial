@@ -1,6 +1,6 @@
 // ----------------Modul-3-Об'єкти--
 
-// --1/41--
+// ------------------------1/41--
 // --Присвой змінній apartment об'єкт, який описує квартиру
 // const apartment = {
 //   imgUrl: "https://via.placeholder.com/640x480",
@@ -10,7 +10,7 @@
 //   tags: ["premium", "promoted", "top"],
 // };
 
-// --2/41--
+// ------------------------2/41--
 // --Значенням властивості може бути інший об'єкт.
 // const apartment = {
 //   imgUrl: "https://via.placeholder.com/640x480",
@@ -25,7 +25,7 @@
 //   },
 // };
 
-// --3/41--
+// -------------------------3/41--
 // -- присвоївши оголошеним змінним вирази звернення до відповідних властивостей об'єкта apartment.
 // const apartment = {
 //   imgUrl: "https://via.placeholder.com/640x480",
@@ -39,7 +39,7 @@
 // const aptPrice = apartment.price;
 // const aptTags = apartment.tags;
 
-// --4/41--
+// --------------------------4/41--
 // const apartment = {
 //   imgUrl: "https://via.placeholder.com/640x480",
 //   descr: "Spacious apartment in the city center",
@@ -60,7 +60,7 @@
 // const lastTag = apartment.tags[2];
 // --Значення змінної lastTag - це "top"
 
-// --5/41--
+// -----------------------------5/41--
 // const apartment = {
 //   imgUrl: "https://via.placeholder.com/640x480",
 //   descr: "Spacious apartment in the city center",
@@ -73,7 +73,7 @@
 // const aptPrice = apartment["price"];
 // const aptTags = apartment["tags"];
 
-// --6/41--Доповни код, оновивши значення властивостей об'єкта apartment
+// ------------------------6/41--Доповни код, оновивши значення властивостей об'єкта apartment
 // const apartment = {
 //   imgUrl: "https://via.placeholder.com/640x480",
 //   descr: "Spacious apartment in the city center",
@@ -91,7 +91,7 @@
 // apartment.owner.name = "Henry Sibola";
 // apartment.tags.push("trusted");
 
-// --7/41--Додай об'єкту apartment кілька нових властивостей
+// -----------------------------7/41--Додай об'єкту apartment кілька нових властивостей
 // const apartment = {
 //   imgUrl: "https://via.placeholder.com/640x480",
 //   descr: "Spacious apartment in the city center",
@@ -111,7 +111,7 @@
 //   city: "Kingston",
 // };
 
-// --8/41--
+// -----------------------------8/41--
 // --Доповни код оголошення об'єкта таким чином, щоб у нього були властивості name, price, image і tags зі значеннями зі змінних
 // const name = "Repair Droid";
 // const price = 2500;
@@ -124,7 +124,7 @@
 //   tags,
 // };
 
-// --9/41--
+// ------------------------------9/41--
 // --Доповни код оголошення об'єкта credentials таким чином, щоб в результаті у нього були дві властивості: email і password, імена яких зберігаються у змінних
 // const emailInputName = "email";
 // const passwordInputName = "password";
@@ -133,7 +133,7 @@
 //   [passwordInputName]: "jqueryismyjam",
 // };
 
-// --10/41--
+// -----------------------------10/41--
 // --Перебери об'єкт apartment, використовуючи цикл for...in, і запиши в масив keys всі його ключі, а в масив values всі значення його властивостей.
 // const apartment = {
 //   descr: "Spacious apartment in the city center",
@@ -147,7 +147,7 @@
 //   values.push(apartment[key]);
 // }
 
-// --11/41--
+// ---------------------------11/41--
 // --перевірку на власну властивість методом hasOwnProperty(obj)
 // const keys = [];
 // const values = [];
@@ -166,7 +166,7 @@
 // }
 // --Значення змінної keys - це масив ["descr", "rating", "price"].
 
-// --12/41--
+// -----------------------------12/41--
 // --рахує і повертає кількість власних властивостей об'єкта в параметрі object
 // function countProps(object) {
 //   let propCount = 0;
@@ -178,7 +178,7 @@
 // }
 // --Виклик countProps({ name: "Mango", age: 2 }) повертає 2
 
-// --13/41
+// -------------------------------13/41
 // const apartment = {
 //   descr: "Spacious apartment in the city center",
 //   rating: 4,
@@ -193,7 +193,7 @@
 // console.log(values);
 // --Значення змінної values - це масив ["Spacious apartment in the city center", 4, 2153]
 
-// --14/41--
+// -------------------------------14/41--
 // function countProps(object) {
 //   let propCount = 0;
 //   for (const key of Object.keys(object)) {
@@ -203,7 +203,7 @@
 // }
 // --Виклик countProps({ name: "Mango", age: 2 }) повертає 2
 
-// --15/41--
+// -------------------------------15/41--
 // --Запиши у змінну keys масив ключів власних властивостей об'єкта apartment, а у змінну values - масив всіх значень його властивостей. Використовуй методи Object.keys() і Object.values().
 // const apartment = {
 //   descr: "Spacious apartment in the city center",
@@ -213,7 +213,7 @@
 // const keys = Object.keys(apartment);
 // const values = Object.values(apartment);
 
-// --16/41--
+// ------------------------------16/41--
 // --Функція повинна розрахувати загальну суму зарплат співробітників і повернути її
 // function countTotalSalary(salaries) {
 //   let totalSalary = 0;
@@ -225,7 +225,7 @@
 // }
 // --Виклик countTotalSalary({ mango: 100, poly: 150, alfred: 80 })
 
-// --17/41--
+// ------------------------------17/41--
 // --Додай у масив hexColors значення властивостей hex, а в масив rgbColors - значення властивостей rgb з усіх об'єктів масиву colors.
 // const colors = [
 //   { hex: "#f44336", rgb: "244,67,54" },
@@ -242,7 +242,7 @@
 // console.log(hexColors);
 // --Значення змінної hexColors - це масив ["#f44336", "#2196f3", "#4caf50", "#ffeb3b"]
 
-// --18/41--
+// ------------------------------18/41--
 // --ЗАДАЧА. ПОШУК ОБ'ЄКТА ЗА ЗНАЧЕННЯМ ВЛАСТИВОСТІ
 // const products = [
 //   { name: "Radar", price: 1300, quantity: 4 },
@@ -262,7 +262,7 @@
 // --Виклик getProductPrice("Droid") повертає 400.
 // --Виклик getProductPrice("Engine") повертає null.
 
-// --19/41--
+// ------------------------------19/41--
 // --ЗАДАЧА: КОЛЕКЦІЯ ЗНАЧЕНЬ ВЛАСТИВОСТІ
 // const products = [
 //   { name: "Radar", price: 1300, quantity: 4 },
@@ -292,7 +292,7 @@
 // --Виклик getAllPropValues("price") повертає [1300, 2700, 400, 1200]
 // --Виклик getAllPropValues("category") повертає []
 
-// --20/41--
+// -------------------------------20/41--
 // const products = [
 //   { name: "Radar", price: 1300, quantity: 4 },
 //   { name: "Scanner", price: 2700, quantity: 3 },
@@ -315,7 +315,7 @@
 // calculateTotalPrice("Radar");
 // --Виклик calculateTotalPrice("Radar") повертає 5200
 
-// --21/41--
+// ------------------------------21/41--
 // --Деструктуризація властивостей об'єкта
 // const highTemperatures = {
 //   yesterday: 28,
@@ -327,7 +327,7 @@
 // // --Застосовуємо
 // const meanTemperature = (yesterday + today + tomorrow) / 3;
 
-// --22/41--
+// --------------------------------22/41--
 // const highTemperatures = {
 //   yesterday: 28,
 //   today: 26,
@@ -342,7 +342,7 @@
 // const meanTemperature = (yesterday + today + tomorrow) / 3;
 // console.log(icon);
 
-// --23/41--
+// ------------------------------23/41--
 // const highTemperatures = {
 //   yesterday: 28,
 //   today: 26,
@@ -357,7 +357,7 @@
 
 // const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
 
-// --24/41--
+// ---------------------------24/41--
 // --Виконай рефакторинг циклу for...of таким чином, щоб в ньому використовувалася деструктуризація об'єкта.
 // const colors = [
 //   { hex: "#f44336", rgb: "244,67,54" },
@@ -373,7 +373,7 @@
 // }
 // --або ж: for (const color of colors) {const { hex, rgb } = color; hexColors.push(hex);}
 
-// --25/41--
+// -----------------------------25/41--
 // const forecast = {
 //   today: {
 //     low: 28,
@@ -399,7 +399,7 @@
 //   },
 // } = forecast;
 
-// --26/41--
+// --------------------------------26/41--
 // function calculateMeanTemperature(forecast) {
 //   const {
 //     today: { low: todayLow, high: todayHigh },
@@ -414,13 +414,13 @@
 // });
 // --Виклик calculateMeanTemperature({ today: {low: 28, high: 32}, tomorrow: {low: 25, high: 29} }) повертає 28.5
 
-// --27/41--
+// -------------------------------27/41--
 // --щоб у змінній bestScore був найвищий бал, а у worstScore - найнижчий.
 // const scores = [89, 64, 42, 17, 93, 51, 26];
 // const bestScore = Math.max(...scores);
 // const worstScore = Math.min(...scores);
 
-// --28/41--
+// --------------------------------28/41--
 // const firstGroupScores = [64, 42, 93];
 // const secondGroupScores = [89, 14, 51, 26];
 // const thirdGroupScores = [29, 47, 18, 97, 81];
@@ -436,7 +436,7 @@
 // console.log(`bestScore`, bestScore);
 // console.log(`worstScore`, worstScore);
 
-// --29/41---(...spread)
+// ----------------------------29/41---(...spread)
 // ---щоб у змінній finalSettings утворився об'єкт фінальних налаштувань тесту.
 // const defaultSettings = {
 //   theme: "light",
@@ -453,7 +453,7 @@
 // // Change code below this line
 // const finalSettings = { ...defaultSettings, ...overrideSettings };
 
-// --30/41--
+// -------------------------------30/41--
 // --ЗАДАЧА. КАРТКИ ЗАВДАНЬ. Функція повинна створити і повернути новий об'єкт завдання, не змінюючи напряму параметр data.
 // function makeTask(data) {
 //   const completed = false;
@@ -480,7 +480,7 @@
 /* --Виклик makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }) 
 /повертає { category: "Homemade", priority: "Low", text: "Take out the trash", completed: false } --*/
 
-// --31/41---------Операція ... (rest) --
+// ---------------------------31/41---------Операція ... (rest) --
 // function add(...args) {
 //   let sum = 0;
 //   for (const num of args) {
@@ -490,7 +490,7 @@
 // }
 // console.log(add(1, 2));
 
-// --32/41--
+// ----------------------------32/41--
 // --щоб вона рахувала суму тільки тих аргументів, які більші за задане число. Це число повинно бути першим параметром функції.
 // function addOverNum(num, ...args) {
 //   let total = 0;
@@ -506,7 +506,7 @@
 // addOverNum(50, 15, 27);
 // // --Виклик addOverNum(50, 15, 27) повертає 0
 
-// --33/41----------------ЗАДАЧА. МАСИВ ЗБІГІВ
+// ---------------------------33/41----------------ЗАДАЧА. МАСИВ ЗБІГІВ
 // --щоб вона повертала новий масив matches, в якому будуть тільки ті аргументи, починаючи з другого, які є в масиві першого аргументу.
 // function findMatches(array, ...rest) {
 //   const matches = []; // Don't change this line
@@ -522,7 +522,7 @@
 // findMatches([63, 11, 8, 29], 4, 7, 16);
 // --Виклик findMatches([63, 11, 8, 29], 4, 7, 16) повертає []
 
-// --34/41--
+// ---------------------------34/41--
 // --Додай об'єкту bookShelf ще два методи, які поки що будуть повертати просто рядки за аналогією з getBooks() і addBook(bookName).
 // const bookShelf = {
 //   // Change code below this line

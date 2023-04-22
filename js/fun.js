@@ -12,10 +12,21 @@
 // const sumArray = calSum(...array);
 // console.log(`sumArray=`, sumArray);
 
-// ------------------------rest--
+// ---------------------------------rest--
 // function fnRest(...rest) {
 //   console.log(rest);
 //   //   return rest;
 // }
 // const numbers = [1, 2];
 // console.log(fnRest(...numbers));
+
+// ---------------------------Колбек-функція-модуль 4 заняття 7
+// function greet(name) {
+//   console.log(`Ласкаво просимо ${name}.`);
+// }
+// // Функція вищого порядку
+// function registerGuest(name, callback) {
+//   console.log(`Реєструємо гостя ${name}.`);
+//   callback(name);
+// }
+// registerGuest("Манго", greet);
