@@ -587,8 +587,8 @@
 
 // --------------------48/48-----Ланцюжки методів-
 // --повертала загальний баланс користувачів (властивість balance), стать яких (властивість gender) збігається зі значенням параметра gender
-const getTotalBalanceByGender = (users, gender) => { return users
-      .filter(gend => gend.gender === gender)
-      .reduce((total, bal) => {return total + bal.balance;}, 0)
+// const getTotalBalanceByGender = (users, gender) => { return users
+//       .filter(gend => gend.gender === gender)
+//       .reduce((total, bal) => {return total + bal.balance;}, 0)
 
-};
+// };
