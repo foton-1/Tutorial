@@ -1,9 +1,59 @@
-/* -----------3-- */
+/* ----------Ex-3-- */
 body {
   margin: 24px;
 }
 
-/* -----------5-- */
+/* ----------Ex-5-- */
 /* .is-hidden {
   display: none;
 } */
+
+/* ----------Ex-10- */
+/* .usernames li {
+  padding: 8px;
+  border: 2px dashed tomato;
+  text-transform: uppercase;
+}
+.usernames li:not(:last-child) {
+  margin-bottom: 12px;
+} */
+
+/* ----------Ex-11 -- */
+body {
+  font-family: sans-serif;
+}
+
+/* ---------Ex-12a */
+/* body {
+  margin: 16px;
+}
+.accent {
+  color: tomato;
+  text-decoration: underline;
+} */
+
+/*---------Ex-12b Однотипна (шаблонна) розмітка створюється із масиву даних */
+/* body {
+  padding: 16px;
+}
+.list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.list-item {
+  padding: 8px;
+  border-width: 2px;
+  border-style: dashed;
+}
+.list-item:nth-child(even) {
+  border-color: tomato;
+}
+.list-item:nth-child(odd) {
+  border-color: blueviolet;
+}
+.list-item:not(:last-child) {
+  margin-bottom: 8px;
+} */
+
+/*  */
