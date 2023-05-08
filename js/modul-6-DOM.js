@@ -174,22 +174,50 @@
 
 // --------------Ex-12-Властивість innerHTML
 /*--Читання. Властивість innerHTML зберігає вміст елемента, включно з тегами, у вигляді рядка.
-----------12a--Зміна. Властивість innerHTML доступна і для читання, і для запису.*/
+---12a--Зміна. Властивість innerHTML доступна і для читання, і для запису.*/
 // const title = document.querySelector(".article .title");
 // title.innerHTML = 'New and <span class="accent">improved</span> title';
 
-// ---------12b--Однотипна (шаблонна) розмітка створюється із масиву даних.
+// --12b--Однотипна (шаблонна) розмітка створюється із масиву даних.
 // const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
 // const list = document.querySelector(".list");
-
 // const markup = technologies
 //   .map((technology) => `<li class="list-item">${technology}</li>`)
 //   .join("");
-
 // // Check the console, you'll see a single string with HTML tags
 // console.log(markup);
-
 // // Adding all the markup in one operation
 // list.innerHTML = markup;
 
-// 
+// -----------Ex-13-Додавання--innerHTML
+/*--Зміна elem.innerHTML повністю видалить і повторно створить всі нащадки елемента elem--*/
+// const article = document.querySelector(".article");
+// const htmlString = `<p class="article-text">Nullam quis ante. Vestibulum dapibus nunc ac augue. In consectetuer turpis ut velit.</p>
+//    <a class="link" href="#">Read more...</a>`;
+
+// // Replace += with = operator. See the difference?
+// // Article title is lost because we overwrite element content.
+// article.innerHTML += htmlString;
+
+// ------------Ex-14-Метод insertAdjacentHTML()
+/*--Сучасний метод для додавання рядка з HTML-тегами перед, після 
+--або всередину елемента  elem.insertAdjacentHTML(position, string);.
+--"beforebegin" - перед elem
+--"afterbegin" - всередині elem, перед усіма дітьми
+--"beforeend" - всередині elem, після усіх дітей
+--"afterend" - після elem
+*/
+// const list = document.querySelector(".list");
+// const newTechnologies = ["React", "TypeScript", "Node.js"];
+// const markup = newTechnologies
+//   .map((technology) => `<li class="list-item new">${technology}</li>`)
+//   .join("");
+// list.insertAdjacentHTML("beforeend", markup);
+// list.insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
+
+// -------------Підключення скриптів-
+/*--Атрибут defer вказує браузеру завантажувати файл скрипта у фоновому режимі, 
+паралельно обробці HTML-документа і побудові DOM
+--Завантаження скрипта з атрибутом async не блокує побудову DOM, але 
+він виконується відразу після завантаження
+*/
