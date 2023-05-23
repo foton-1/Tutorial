@@ -1,13 +1,4 @@
-.navmenu {
-  position: fixed;
-  top: 0px;
-  left: 10px;
-}
-.tasktitle {
-  position: fixed;
-  top: 20px;
-  left: 10px;
-}
+
 
 /* ----------ПОДІЇ-- */
 
@@ -19,7 +10,7 @@
 } */
 
 /* -2--- */
-body {
+/* body {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -38,4 +29,19 @@ body {
 
 .register-form button {
   padding: 12px;
+} */
+
+/* ---Подія submit */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 32px;
 }

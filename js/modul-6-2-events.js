@@ -1,5 +1,5 @@
-/*-- -------------------ПОДІЇ--------*/
-/*--<!-------------- Метод addEventListener() 
+/*-- -------------Модуль-6.2--ПОДІЇ-----Конспект--*/
+/*--<!----------- Метод addEventListener() 
     додає слухача події на елемент - element.addEventListener(event, handler, options);
     --event - ім'я події, рядок, наприклад "click".
     --handler - колбек-функція, яка буде викликана під час настання події.
@@ -23,7 +23,7 @@
 
 // --------Ключове слово this--
 
-// --------------------ОБ'ЄКТ ПОДІЇ---
+// -----------------ОБ'ЄКТ ПОДІЇ---
 // -1--Деякі властивості об'єкта події
 // const button = document.querySelector(".btn");
 // const handleClick = (event) => {
@@ -33,13 +33,37 @@
 // };
 // button.addEventListener("click", handleClick);
 
-// -2--preventDefault()
-// --Для скасування дії браузера за замовчуванням в об'єкта події є стандартний метод
-const form = document.querySelector(".register-form");
-form.addEventListener("submit", (event) => {
+// -2--preventDefault()--
+// --Для скасування дії браузера за замовчуванням в об'єкта події
+// --є стандартний метод
+// const form = document.querySelector(".register-form");
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   const {
+//     elements: { username, password },
+//   } = event.currentTarget;
+//   console.log(username.value, password.value);
+// });
+
+// ---------------------Події клавіатури--
+
+// ---------------------ПОДІЇ ЕЛЕМЕНТІВ ФОРМ--
+// --Подія submit-
+const form = document.querySelector(".form");
+
+form.addEventListener("submit", handleSubmit);
+
+function handleSubmit(event) {
   event.preventDefault();
+  console.log(event.currentTarget);
   const {
-    elements: { username, password },
+    elements: { login, password },
   } = event.currentTarget;
-  console.log(username.value, password.value);
-});
+
+  if (login.value === "" || password.value === "") {
+    return console.log("Please fill in all the fields!");
+  }
+
+  console.log(`Login: ${login.value}, Password: ${password.value}`);
+  event.currentTarget.reset();
+}

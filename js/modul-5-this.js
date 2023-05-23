@@ -1,4 +1,4 @@
-// ---------Modul-5-this.js--this--Класи//
+// ---------Modul-5-this.js--this--Класи- Автоперевірка--//
 
 // --------------1/20--this
 // const pizzaPalace = {
